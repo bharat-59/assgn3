@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>enter a value</h1>
+
+    <input type="text" onchange="myFun()" id="myInput" />
+
+    <div id="myDIV"></div>
+
+    <script>
+      function myFun() {
+        let value = document.getElementById("myInput").value;
+        document.getElementById("myDIV").innerHTML = "";
+        console.log(value);
+        var str = "";
+        for (let i = 0; i < value; i++) {
+          str = str + "*";
+          const para = document.createElement("p");
+          const node = document.createTextNode(`${str}`);
+
+          para.appendChild(node);
+          document.getElementById("myDIV").appendChild(para);
+        }
+      }
+    </script>
+  </body>
+</html>

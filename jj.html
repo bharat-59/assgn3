@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div id="elem">
+      <p>my testing div</p>
+    </div> -->
+    <!-- New comment -->
+    <div id="sel">
+      <a href="http://example.com/file.zip">...</a>
+      <a href="http://example.com/file1.zip">...</a>
+      <a href="http://example.com/file2.zip">...</a>
+    </div>
+
+    <div id="elem" about="Elephant"></div>
+
+    <script>
+      // var val = document.getElementById("elem");
+      // // window["elem"].style.background = "red";
+      // val.style.background = "red";
+      // window["elem"].style.background = "green";
+      // console.log(val);
+      // val = 10;
+      // // val.style.background = "green";
+      // // window["elem"].style.background = "green";
+      // console.log(val);
+      var val = document.getElementById("sel");
+      for (let elem of val.children) {
+        if (elem.matches('a[href$="zip"]')) {
+          console.log("the archive reference: " + elem.href);
+        }
+      }
+
+      console.log(
+        "docuument.body.constructor.name = " + document.body.constructor.name
+      );
+      console.dir(document.body);
+
+      console.log(elem.getAttribute("About"));
+      elem.setAttribute("Test", 123);
+      alert(elem.outerHTML);
+      for (let attrt of elem.attributes) {
+        console.log(`${attrt.name}=${attrt.value}`);
+      }
+    </script>
+  </body>
+</html>
